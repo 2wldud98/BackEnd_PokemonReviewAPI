@@ -5,9 +5,12 @@ import com.pokemonreview.api.exceptions.MyResourceException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ProblemDetail;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import java.time.Instant;
 
 @RestControllerAdvice
 @Slf4j
@@ -21,6 +24,18 @@ public class GlobalExceptionHandler {
         log.error(ex.getMessage(), ex);
 
         return new ResponseEntity<ErrorObject>(errorObject, HttpStatusCode.valueOf(ex.getStatusCode()));
+    }
+
+    /*
+        Spring6버전에 추가된 ProblemDetail 개체에 에러정볼르 담아서 리턴하는 방법
+     */
+    protected ProblemDetail handleException(MyResourceException e) {
+        ProblemDetail problemDetail = ProblemDetail.forStatus(e.getStatusCode());
+        problemDetail.setTitle("Not Found");
+        problemDetail.setDetail(e.getMessage());
+        problemDetail.setProperty("errorCategory", "Generic");
+        problemDetail.setProperty("timestamp", Instant.now());
+        return problemDetail;
     }
 
     @ExceptionHandler(Exception.class)
