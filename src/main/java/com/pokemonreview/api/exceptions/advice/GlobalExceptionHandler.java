@@ -27,7 +27,7 @@ public class GlobalExceptionHandler {
     }
 
     /*
-        Spring6버전에 추가된 ProblemDetail 개체에 에러정볼르 담아서 리턴하는 방법
+        Spring6버전에 추가된 ProblemDetail 개체에 에러정보를 담아서 리턴하는 방법
      */
     protected ProblemDetail handleException(MyResourceException e) {
         ProblemDetail problemDetail = ProblemDetail.forStatus(e.getStatusCode());
