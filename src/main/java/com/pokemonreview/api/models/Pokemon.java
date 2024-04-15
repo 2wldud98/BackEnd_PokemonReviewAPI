@@ -19,7 +19,7 @@ public class Pokemon {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "pokemon_id")
-    private int id;
+    private Integer id;
 
     @Column(nullable = false)
     private String name;
