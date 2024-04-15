@@ -37,6 +37,7 @@ public class PokemonRepositoryTests {
         assertThat(savedPokemon).isNotNull();
         assertThat(savedPokemon.getId())
             .isGreaterThan(0);
+        assertThat(savedPokemon.getName()).isEqualTo("Pikachu");
 
     }
 
