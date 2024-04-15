@@ -23,7 +23,7 @@ public class AppConfig {
             System.out.println("**** Pokemon Insert 시작");
             //pokemonRepository.deleteAll();
             List<Pokemon> pokemonList = IntStream.rangeClosed(1, 10)
-                    .mapToObj(i -> Pokemon.builder()
+                    .mapToObj(i -> Pokemon.builder() // PokemonBuilder
                             .name("pikachu" + i)
                             .type(PokemonType.ELECTRIC)
                             .build())
