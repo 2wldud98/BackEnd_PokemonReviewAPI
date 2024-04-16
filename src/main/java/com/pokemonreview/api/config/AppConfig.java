@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 @Configuration
-@Profile("local")
+@Profile("dev")
 public class AppConfig {
     @Bean
     public CommandLineRunner test(PokemonRepository pokemonRepository, ReviewRepository reviewRepository) {

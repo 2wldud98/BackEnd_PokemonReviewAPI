@@ -1,0 +1,33 @@
+insert into pokemon (name,type,pokemon_id) values
+   ('pikachu1','ELECTRIC',default),
+   ('pikachu2','NORMAL',default),
+   ('pikachu3','FIRE',default),
+   ('pikachu4','FIGHTING',default),
+   ('pikachu5','POISON',default),
+   ('pikachu6','FLYING',default),
+   ('pikachu7','PSYCHIC',default),
+   ('pikachu8','ROCK',default),
+   ('pikachu9','GHOST',default),
+   ('pikachu10','DARK',default);
+
+insert into review (content,pokemon_id,stars,title,review_id) values
+  ('pikachu1 content',1,5,'pikachu1 title',default),
+  ('ELECTRIC content',1,9,'ELECTRIC title',default),
+  ('pikachu2 content',2,5,'pikachu2 title',default),
+  ('NORMAL content',2,9,'NORMAL title',default),
+  ('pikachu3 content',3,5,'pikachu3 title',default),
+  ('FIRE content',3,9,'FIRE title',default),
+  ('pikachu4 content',4,5,'pikachu4 title',default),
+  ('FIGHTING content',4,9,'FIGHTING title',default),
+  ('pikachu5 content',5,5,'pikachu5 title',default),
+  ('POISON content',5,9,'POISON title',default),
+  ('pikachu6 content',6,5,'pikachu6 title',default),
+  ('FLYING content',6,9,'FLYING title',default),
+  ('pikachu7 content',7,5,'pikachu7 title',default),
+  ('PSYCHIC content',7,9,'PSYCHIC title',default),
+  ('pikachu8 content',8,5,'pikachu8 title',default),
+  ('ROCK content',8,9,'ROCK title',default),
+  ('pikachu9 content',9,5,'pikachu9 title',default),
+  ('GHOST content',9,9,'GHOST title',default),
+  ('pikachu10 content',10,5,'pikachu10 title',default),
+  ('DARK content',10,9,'DARK title',default);
