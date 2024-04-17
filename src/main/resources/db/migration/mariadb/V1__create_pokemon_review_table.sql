@@ -1,3 +1,7 @@
+DROP TABLE IF EXISTS flyway_schema_history;
+DROP TABLE IF EXISTS review;
+DROP TABLE IF EXISTS pokemon;
+
 create table pokemon (
      pokemon_id integer not null auto_increment,
      name varchar(255) not null,
